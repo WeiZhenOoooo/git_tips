@@ -4,13 +4,17 @@
 
 针对Windows Git 升级
 
-```shell
-# <=2.17.1更新命令：
-git update
+- version <=2.17.1更新命令：
 
-# >2.17.1更新命令：
-git update-git-for-windows
-```
+  ```shell
+  git update
+  ```
+
+- version > 2.17.1更新命令：
+
+  ```
+  git update-git-for-windows
+  ```
 
 ## 指定克隆
 
@@ -21,16 +25,18 @@ git update-git-for-windows
    开启Git稀疏克隆，并下载除了具体的文件内容Blob对象之外的其他对象文件，包括tree对象、commit对象、tag对象，以保证git历史记录和项目目录结构的完整性。这样可以实现快速、高效地克隆大型仓库，并节省存储空间。
 
    ```shell
-   # 过滤掉blob文件
    git clone --filter=blob:none --sparse <your-git-url>
    ```
 
 2. 指定拉取
 
-   ```
-   # 指定git拉取的目录文件
+   ```shell
    git sparse-checkout add <your-folder>
-   # 或者
+   ```
+
+   或者
+
+   ```shell
    git sparse-checkout set <your-folder>
    ```
 
